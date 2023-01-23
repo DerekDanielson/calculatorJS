@@ -1,58 +1,74 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
 body {
-    background-color: black;
-}
-
-#container {
-    width: 1000px;
-    height: 550px;
     background-color: aqua;
-    margin: 20px auto;
+    margin: 0;
+    padding: 0;
 }
 
-#calculator {
-    width: 320px;
-    height: 520px;
-    background-color: whitesmoke;
-    margin: 0 auto;
-    top: 20px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 20px 50px 0;
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-#result {
-    height: 120px;
-}
-
-#history {
-    text-align: right;
-    height: 20px;
-    margin: 0 20px;
-    padding-top: 20px;
-    font-size: 16px;
-    color: gray;
-}
-
-#output {
-    text-align: right;
-    height: 60px;
-    margin: 10px 20px;
-    font-size: 24px;
-}
-
-#keyboard {
-    height: 400px;
-}
-
-.operator, .number, .empty {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-    float: left;
-}
-
-.number, .operator {
+.calculator > button {
     cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
 }
+
+.calculator > button:hover {
+    background-color: lightgray;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .history {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
