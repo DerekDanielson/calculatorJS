@@ -50,3 +50,9 @@ body {
     margin: 15px;
     float: left;
 }
+
+.number, .operator {
+    cursor: pointer;
+}
+
+
